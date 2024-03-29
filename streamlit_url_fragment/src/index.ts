@@ -8,5 +8,5 @@ const hashChangeHandler = () => {
 
 targetWindow.addEventListener('hashchange', hashChangeHandler)
 Streamlit.setComponentReady()
-hashChangeHandler()
+Streamlit.events.addEventListener(Streamlit.RENDER_EVENT, hashChangeHandler)
 Streamlit.setFrameHeight(0)
